@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Samuel Johnson</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fff;
+      color: #111;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    nav {
+      background: #111;
+      width: 100%;
+    }
+    .nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      margin: 0 0 0 24px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+      padding: 18px 0;
+      display: block;
+    }
+    nav a:hover, nav a.active {
+      color: #bbb;
+      border-bottom: 2px solid #fff;
+    }
+    .hero-header {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      background: url('https://pplx-res.cloudinary.com/image/upload/v1744750879/user_uploads/WEgHaXlBZbhopxM/F437E440-416D-4910-8B8C-03F807232633_1_105_c.jpg') center 60%/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      text-align: center;
+      padding: 32px 20px;
+      border-radius: 12px;
+    }
+    .hero-header h1 {
+      font-size: 2.2rem;
+      margin: 0 0 10px 0;
+      letter-spacing: 2px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 40px;
+      border-bottom: 2px solid #111;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .section {
+      margin-bottom: 50px;
+    }
+    .resume-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .resume-col {
+      flex: 1 1 250px;
+      min-width: 250px;
+    }
+    .contact-list, .skills-list, .hobbies-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .contact-list li {
+      margin-bottom: 8px;
+    }
+    .skills-list li, .hobbies-list li {
+      margin-bottom: 6px;
+    }
+    @media (max-width: 700px) {
+      .hero-header {
+        height: 180px;
+      }
+      .hero-header h1 {
+        font-size: 1.3rem;
+      }
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+      nav li {
+        margin: 0 0 0 0;
+      }
+      nav a {
+        padding: 12px 0;
+      }
+      .resume-columns {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="post.html">Post</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="snake.html">Game!</a></li>
+        <li><a href="scratch.html">Sctatch</a></li> <!-- On-page anchor -->
+
+      </ul>
+    </div>
+  </nav>
+  <header class="hero-header">
+    <div class="hero-overlay">
+      <h1>About Samuel Johnson</h1>
+    </div>
+  </header>
+  <div class="container">
+    <section class="section" id="profile">
+      <h2>Profile</h2>
+      <p>
+        23-year-old BYU student from Jackson, Wyoming with experience in marketing, product development, construction, excavation, landscaping, retail, coaching, and leadership. Founder of Hiki Sauna, a portable sauna company (<a href="https://hikisauna.com" target="_blank">hikisauna.com</a>). Passionate about trail running, ski mountaineering, mountain biking, and music production.
+      </p>
+    </section>
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <ul class="contact-list">
+        <li><strong>Jackson Hole High School</strong> (2020) — 3.6 GPA</li>
+        <li><strong>Utah Valley University</strong> (2023) — 4.0 GPA</li>
+        <li><strong>Brigham Young University</strong> — Currently enrolled in the pre-business program</li>
+      </ul>
+    </section>
+    <section class="section" id="employment">
+      <h2>Most Recent Employment</h2>
+      <div class="resume-columns">
+        <div class="resume-col">
+          <strong>Head Ski Coach</strong><br>
+          Jackson Hole Ski Club | Winter 2023/24
+          <ul class="skills-list">
+            <li>Planned training programs</li>
+            <li>Managed assistant coaches</li>
+            <li>Communicated with parents</li>
+            <li>Traveled with the team</li>
+          </ul>
+        </div>
+        <div class="resume-col">
+          <strong>Camp Counselor</strong><br>
+          Birch Creek Service Ranch | Summer 2023
+          <ul class="skills-list">
+            <li>Mentored boys ages 12-14</li>
+            <li>Planned and guided multi-day backpacking, climbing, and mountain biking trips</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Excavation, Plumbing, Carpentry:</strong> Operated heavy equipment, repaired septic systems, construction laborer/assistant carpenter</li>
+        <li><strong>Marketing:</strong> Freelanced in social media marketing for clients in Jackson, WY and for Hiki Sauna</li>
+        <li><strong>Coaching & Leadership:</strong> Head coach for a club Nordic ski team, ranch-camp counselor/guide for 3 years</li>
+        <li><strong>Retail:</strong> Retail experience and strong customer service skills</li>
+        <li><strong>Innovation, Design, Entrepreneurship:</strong> Worked for LooLoo testing/designing automatic toilet fragrance devices, designed and launched a portable sauna business</li>
+      </ul>
+    </section>
+    <section class="section" id="hobbies">
+      <h2>Hobbies & Interests</h2>
+      <ul class="hobbies-list">
+        <li>Trail running</li>
+        <li>Ski mountaineering</li>
+        <li>Mountain biking</li>
+        <li>Music production</li>
+        <li>Entrepreneurship</li>
+      </ul>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Samuel Johnson. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game | Samuel Johnson</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fff;
+      color: #111;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    nav {
+      background: #111;
+      width: 100%;
+    }
+    .nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      margin-left: 24px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      transition: color 0.2s, border-bottom 0.2s ease-in-out;
+      padding: 18px 0;
+    }
+    nav a:hover, nav a.active {
+      color: #bbb;
+      border-bottom: 2px solid #fff;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50; /* Dark background for Snake Game */
+      color: white;
+    }
+    canvas {
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
+      border: 2px solid #111;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-container">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="post.html">Post</a></li>
+      <li><a href="snake.html" class="active">Snake Game</a></li>
+      <li><a href="scratch.html">Sctatch</a></li> <!-- On-page anchor -->
+
+    </ul>
+  </div>
+</nav>
+<header>
+  <h1>Snake Game</h1>
+</header>
+<canvas id="gameCanvas" width="400" height="400"></canvas>
+<footer>
+  &copy; Samuel Johnson | Snake Game
+</footer>
+
+<script>
+// Game variables
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const gridSize = 20; // Size of each grid square
+const snake = [{ x: gridSize * 5, y: gridSize * 5 }]; // Initial snake position
+let direction = 'right'; // Initial direction
+let food = { x: gridSize * Math.floor(Math.random() * (canvas.width / gridSize)), 
+             y: gridSize * Math.floor(Math.random() * (canvas.height / gridSize)) };
+let gameOver = false;
+
+// Draw the game elements
+function draw() {
+    // Clear the canvas
+    ctx.fillStyle = '#ecf0f1';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Draw the snake
+    ctx.fillStyle = '#2ecc71';
+    snake.forEach(segment => {
+        ctx.fillRect(segment.x, segment.y, gridSize, gridSize);
+    });
+
+    // Draw the food
+    ctx.fillStyle = '#e74c3c';
+    ctx.fillRect(food.x, food.y, gridSize, gridSize);
+
+    // Draw game over message
+    if (gameOver) {
+        ctx.fillStyle = '#111';
+        ctx.font = '24px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('Game Over!', canvas.width / 2, canvas.height / 2);
+        ctx.fillText('Press Space to Restart', canvas.width / 2, canvas.height / 2 + 30);
+        return; // Stop drawing if game is over
+    }
+}
+
+// Update the game state
+function update() {
+    if (gameOver) return;
+
+    // Move the snake
+    const head = { ...snake[0] }; // Copy the head of the snake
+    if (direction === 'right') head.x += gridSize; 
+    else if (direction === 'left') head.x -= gridSize; 
+    else if (direction === 'up') head.y -= gridSize; 
+    else if (direction === 'down') head.y += gridSize;
+
+    // Check for collisions with walls or itself
+    if (
+        head.x < 0 || 
+        head.x >= canvas.width || 
+        head.y < 0 || 
+        head.y >= canvas.height || 
+        snake.some(segment => segment.x === head.x && segment.y === head.y)
+       ) {
+        gameOver = true; 
+        return; 
+       }
+
+snake.unshift(head);//add new position if(head.x===food.x&&head.y===food.y){food={x:grid*Math.floor(Math.random()*canvas.width/grid),}}else{snake.pop();}
+}
+function loop(){update();draw();setTimeout(loop,100);}
+document.addEventListener("keydown",()=>{});loop();
+</script>
+</body>
+</html>

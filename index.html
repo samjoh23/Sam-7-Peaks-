@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samuel Johnson | Home</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fff;
+      color: #111;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    /* Navigation */
+    nav {
+      background: #111;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    .nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      margin: 0 0 0 24px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+      padding: 18px 0;
+      display: block;
+    }
+    nav a:hover, nav a.active {
+      color: #bbb;
+      border-bottom: 2px solid #fff;
+    }
+    /* Hero Header */
+    .hero-header {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background: url('https://pplx-res.cloudinary.com/image/upload/v1744750873/user_uploads/qCHBuWqUflwgELd/478010CE-5142-40FD-B33B-0A292EF5AF03_1_105_c.jpg') center 40%/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 12px;
+    }
+    .hero-header h1 {
+      font-size: 2.8rem;
+      margin: 0 0 10px 0;
+      letter-spacing: 2px;
+    }
+    .hero-header p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 40px;
+      border-bottom: 2px solid #111;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .section {
+      margin-bottom: 50px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+    .gallery img:hover {
+      filter: grayscale(0%);
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+    a {
+      color: #111;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #555;
+    }
+    @media (max-width: 700px) {
+      .hero-header {
+        height: 220px;
+      }
+      .hero-header h1 {
+        font-size: 1.5rem;
+      }
+      .hero-header p {
+        font-size: 1rem;
+      }
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+      nav li {
+        margin: 0 0 0 0;
+      }
+      nav a {
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="post.html">Post</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="snake.html">Game!</a></li>
+        <li><a href="scratch.html">Sctatch</a></li> <!-- On-page anchor -->
+
+      </ul>
+    </div>
+  </nav>
+  <header class="hero-header">
+    <div class="hero-overlay">
+      <h1>Samuel Johnson</h1>
+      <p>Welcome to my personal website. Explore my story and photo gallery.</p>
+    </div>
+  </header>
+  <div class="container">
+    <section class="section" id="gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744750873/user_uploads/qCHBuWqUflwgELd/478010CE-5142-40FD-B33B-0A292EF5AF03_1_105_c.jpg" alt="Samuel on a snowy road with mountains">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744750879/user_uploads/WEgHaXlBZbhopxM/F437E440-416D-4910-8B8C-03F807232633_1_105_c.jpg" alt="Samuel on a snowy mountain ridge">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744750891/user_uploads/nOYDZaZkdnifkJp/99B6D112-7DE6-4A9B-9570-11297A61BF47_1_105_c.jpg" alt="Samuel in a car with sunglasses and hat">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744750898/user_uploads/OuhKkcInXHlEbbY/C2B6AA24-1170-4CC1-B494-15D266E6701C_1_105_c.jpg" alt="Samuel skiing in the mountains">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744752874/user_uploads/jXRXDVUhXEnCxWq/07ADEEED-FEDA-430C-B629-A2A8F40F9FB7_1_105_c.jpg" alt="Samuel at a rock climbing area, tie-dye shirt, sunglasses">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744752894/user_uploads/qNfuKdXTzLJbVGT/2E9B2C21-CCDC-4D1D-A731-D5527A87D4B6_1_105_c.jpg" alt="Samuel and group on skis in the snow">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744752898/user_uploads/KzHWlKRmORtJuKq/D4693C40-4AD3-4682-82DF-AC914D9546C0_1_105_c.jpg" alt="Samuel in a tan jacket and visor, mountain background">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744752905/user_uploads/iOafGVwBSZPjGIj/A63B1051-0D2D-40CF-946C-344AA1706C74.jpg" alt="Samuel trail running on rocky mountain ridge">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744753034/user_uploads/kdHwMhXjlWZpnmW/8A3035A2-4E95-4A2A-9969-AD27CC42BD4B_1_105_c.jpg" alt="Samuel and friend hiking in the forest">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744753053/user_uploads/MYPEmYbjCAAlggv/350EDBBE-7B2E-47B3-9E88-C8E7895C6269_1_105_c.jpg" alt="Samuel and friends rock climbing">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744753068/user_uploads/lkyTcPXZWSvvAkc/45683AD1-0FE5-4291-BD54-EEF3E81FD30A_1_105_c.jpg" alt="Samuel and friends at a green pole">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1744753076/user_uploads/UOMtffSGcuxuxGu/8214FFED-05A0-433E-804B-9146B1A5C5B7_1_105_c.jpg" alt="Samuel and friend in a small airplane cockpit">
+        
+    </div>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Samuel Johnson. All rights reserved.
+  </footer>
+</body>
+</html>

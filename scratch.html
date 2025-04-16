@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Seven Summits</title>
+  <link rel="stylesheet" href="css/styles.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+    <style>
+        body {
+          background: #fff;
+          color: #111;
+          font-family: 'Montserrat', Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          line-height: 1.6;
+        }
+        nav {
+          background: #111;
+          width: 100%;
+        }
+        .nav-container {
+          max-width: 900px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 0 20px;
+        }
+        nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+        nav li {
+          margin-left: 24px;
+        }
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          transition: color 0.2s, border-bottom 0.2s ease-in-out;
+          padding: 18px 0;
+        }
+        nav a:hover, nav a.active {
+          color: #bbb;
+          border-bottom: 2px solid #fff;
+        }
+        header {
+          text-align: center;
+          padding: 20px;
+          background-color: #2c3e50; /* Dark background for Snake Game */
+          color: white;
+        }
+        canvas {
+          display: block;
+          margin: 20px auto;
+          border-radius: 8px;
+          border: 2px solid #111;
+        }
+        footer {
+          background-color: #111;
+          color: white;
+          text-align: center;
+          padding: 10px 20px;
+        }
+      </style>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="header">
+    <h1>The Seven Summits</h1>
+    <p>Explore the highest peaks on each continent and their history.</p>
+  </header>
+
+  <!-- Content Section -->
+  <div class="content">
+    <!-- Ordered List with Embedded Unordered List -->
+    <h2>Seven Summits and Their First Ascents</h2>
+    <ol>
+      <li>Asia: Mount Everest (8,848m)
+        <ul>
+          <li>First ascent: Edmund Hillary and Tenzing Norgay (1953)</li>
+        </ul>
+      </li>
+      <li>South America: Aconcagua (6,961m)
+        <ul>
+          <li>First ascent: Matthias Zurbriggen (1897)</li>
+        </ul>
+      </li>
+      <li>North America: Denali (6,190m)
+        <ul>
+          <li>First ascent: Hudson Stuck, Harry Karstens, Walter Harper, Robert Tatum (1913)</li>
+        </ul>
+      </li>
+      <li>Africa: Kilimanjaro (5,895m)
+        <ul>
+          <li>First ascent: Hans Meyer and Ludwig Purtscheller (1889)</li>
+        </ul>
+      </li>
+      <li>Europe: Mount Elbrus (5,642m)
+        <ul>
+          <li>First ascent: Khillar Khachirov (1829)</li>
+        </ul>
+      </li>
+      <li>Antarctica: Mount Vinson (4,897m)
+        <ul>
+          <li>First ascent: Nicholas Clinch-led expedition (1966)</li>
+        </ul>
+      </li>
+      <li>Oceania: Puncak Jaya/Carstensz Pyramid (4,884m)
+        <ul>
+          <li>First ascent: Heinrich Harrer et al. (1962)</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- Image -->
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Everest_kalapatthar.jpg" alt="Mount Everest Summit">
+      <p>The summit of Mount Everest (Image Credit: Wikimedia Commons).</p>
+    </div>
+
+    <!-- YouTube Video -->
+    <div id="video" class="video-container">
+      <h2>The Seven Summits Documentary</h2>
+      <!-- Embedded YouTube video -->
+      <iframe width="560" height="315" src="https://youtu.be/QlWrrlaUJc8?si=YQT468TKywuL_KNl" 
+              title="Seven Summits Documentary" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Tableau Graph -->
+    <div <div class='tableauPlaceholder' id='viz1744776570881' style='position: relative'><noscript><a href='#'><img alt='Worlds&#39; Top 10 Tallest Peaks ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WorldsTop10TallestPeaks&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WorldsTop10TallestPeaks&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WorldsTop10TallestPeaks&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1744776570881');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      &copy; 2025 Samuel Johnson | Seven Summits Page
+    </footer>
+
+  </div>
+
+</body>
+</html>
